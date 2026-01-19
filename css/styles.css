@@ -487,6 +487,7 @@ body {
 
 .footer-container {
   flex-direction: row;
+  align-items: baseline;
 }
 
 .page-footer {
