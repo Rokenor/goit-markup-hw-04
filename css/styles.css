@@ -142,7 +142,7 @@ body {
 
 .main-menu-link.current {
   position: relative;
-  color: var(--iris);
+  color: var(--ocean);
 }
 
 .main-menu-link.current::after {
@@ -152,7 +152,7 @@ body {
   left: 0;
   width: 100%;
   height: 4px;
-  background-color: var(--iris);
+  background-color: var(--ocean);
   border-radius: 2px;
 }
 
@@ -184,6 +184,8 @@ body {
 
   display: block;
   padding: 24px 0;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contacts-link:hover,
@@ -195,13 +197,15 @@ body {
 }
 
 .hero-section {
-  /* background: var(--navy-blue); */
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 188px 0;
   background-image:
     linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     url('../images/hero_bg.jpg');
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hero-slogan {
@@ -233,6 +237,8 @@ body {
   margin: 24px auto 0;
 
   min-width: 169px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
@@ -260,6 +266,8 @@ body {
 .we-list-icon {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 112px;
   border: 1px solid var(--light-slate);
   background: var(--cloud);
   border-radius: 4px;
@@ -361,6 +369,17 @@ body {
   height: 40px;
   background: var(--iris);
   border-radius: 50%;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-list-item-social-link:hover,
+.team-list-item-social-link:focus {
+  background: var(--ocean);
+}
+
+.team-list-item-social-svg {
+  fill: var(--cloud);
 }
 
 .portfolio-section {
@@ -391,6 +410,7 @@ body {
 
 .portfolio-list-item {
   background: var(--white);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list-item:hover {
@@ -399,6 +419,7 @@ body {
     0 1px 1px 0 rgba(46, 47, 66, 0.16),
     0 1px 6px 0 rgba(46, 47, 66, 0.08);
   cursor: pointer;
+  transform: translateY(0%);
 }
 
 .portfolio-list-item:hover .overlay {
@@ -412,7 +433,7 @@ body {
 
 .overlay {
   padding: 8px;
-  background-color: #3f51b5;
+  background-color: #4d5ae5;
   color: #fff;
   font-family: sans-serif;
   position: absolute;
@@ -421,7 +442,7 @@ body {
   width: 100%;
   height: 100%;
   transform: translateY(100%);
-  transition: transform 250ms ease-in-out;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   font-weight: 400;
   font-size: 16px;
@@ -521,6 +542,7 @@ body {
   flex-direction: row;
   justify-content: center;
   gap: 16px;
+  align-items: baseline;
 }
 
 .page-footer-social-list-link {
@@ -531,4 +553,14 @@ body {
   height: 40px;
   background: var(--iris);
   border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.page-footer-social-list-link:hover,
+.page-footer-social-list-link:focus {
+  background: var(--green);
+}
+
+.page-footer-social-list-svg {
+  fill: var(--cloud);
 }
